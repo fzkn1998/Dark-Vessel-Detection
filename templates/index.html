@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Dark Vessel Detection — Satellite Imagery Analysis{% endblock %}
+{% block content %}
+<section class="hero-fullscreen" id="top">
+  <div class="hero-background">
+    <img src="/static/Vessel.jpg" alt="Vessel at sea" loading="eager">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Dark Vessel Analysis</h1>
+      <p>Advanced satellite imagery analysis to identify vessels that are not present in AIS tracking data.</p>
+      {% if stats %}
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">{{ stats.num_scenes }}</span><span class="stat-label">Scenes</span></div>
+        <div class="stat"><span class="stat-num">{{ stats.total_pred }}</span><span class="stat-label">Predictions</span></div>
+        <div class="stat"><span class="stat-num">{{ stats.total_matched }}</span><span class="stat-label">AIS Matched</span></div>
+        <div class="stat"><span class="stat-num">{{ stats.total_dark }}</span><span class="stat-label">Dark Vessels</span></div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="hero-actions">
+      {% if first_scene %}
+        <a href="{{ url_for('scene', scene_id=first_scene) }}" class="btn btn-analyze">🛰️ Start Analysis</a>
+      {% else %}
+        <a href="#" class="btn btn-analyze" aria-disabled="true">🛰️ Start Analysis</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+  
+{% endblock %}

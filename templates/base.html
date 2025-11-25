@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}Dark Vessel Detection System{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="description" content="Satellite imagery analysis for dark vessel detection - identifying vessels not present in AIS tracking data">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-content">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="header-logo">
+    <div class="header-text">
+      <h1>🌊 Dark Vessel Detection</h1>
+      <p class="header-subtitle">Satellite Imagery • AIS Analysis • Maritime Security</p>
+    </div>
+  </div>
+</header>
+<main class="container">
+  {% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">© 2025 Dark Vessel Detection System | Powered by Satellite Imagery & AI</p>
+    <p class="footer-tech">Built with Flask, Plotly, Rasterio & GeoPandas</p>
+  </div>
+</footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

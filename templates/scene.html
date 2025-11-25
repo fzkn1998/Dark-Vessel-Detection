@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Scene {{ scene_id }} - Dark Vessel Detection{% endblock %}
+{% block content %}
+
+<div class="scene-page">
+  <div class="scene-top-bar">
+    <a href="{{ url_for('index') }}" class="btn btn-secondary btn-back">← Back</a>
+  </div>
+
+  <div class="visualization-grid">
+    <div class="main-visualization scene-plot-tall">
+      {{ scene_map_html|safe }}
+    </div>
+    <div class="side-visualization">
+      {{ world_map_html|safe }}
+    </div>
+  </div>
+
+  <div class="data-sections">
+    <div class="section dark-vessel-section">
+      <div class="section-header">
+        <h3>🚢 Dark Vessels Detected</h3>
+        <span class="vessel-count-badge">Detection Results</span>
+      </div>
+      <div class="section-description">Vessels visible in satellite imagery but not present in AIS tracking data</div>
+      <div class="table-wrap">{{ dark_table|safe }}</div>
+    </div>
+  </div>
+</div>
+{% endblock %}
