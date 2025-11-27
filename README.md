@@ -68,21 +68,7 @@ dark_vessel_detection/
    ```bash
    pip install -e .
    ```
-
-## 🚀 Usage
-
-### Training
-To train the model:
-```bash
-python train.py --config configs/default.yaml
-```
-
-### Inference
-To run inference on new data:
-```bash
-python inference.py --input data/raw/test_scenes/ --output results/
-```
-
+   
 ### Web Application
 Start the Flask web application:
 ```bash
@@ -135,6 +121,7 @@ See the notebooks/ directory for data exploration and processing examples.
 ## References
 - [xView3 Challenge](https://www.xview3.org/)
 - [xView3 First Place Solution](https://github.com/BloodAxe/xView3-The-First-Place-Solution)
+
 
 
 
