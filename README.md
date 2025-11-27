@@ -136,5 +136,4 @@ See the notebooks/ directory for data exploration and processing examples.
 - [xView3 Challenge](https://www.xview3.org/)
 - [xView3 First Place Solution](https://github.com/BloodAxe/xView3-The-First-Place-Solution)
 
-## License
-[MIT](LICENSE)
+
